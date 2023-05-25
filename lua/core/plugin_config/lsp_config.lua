@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls" }
+	ensure_installed = { "lua_ls", "rust_analyzer" } -- makes sure rust_analyzer and lua_ls are installed
 })
 
 local on_attach = function(_, _)
@@ -14,5 +14,9 @@ local on_attach = function(_, _)
 end
 
 require("lspconfig").lua_ls.setup {
-	on_attach = on_attach
+	on_attach = on_attach -- setup the on attach keymaps for lua lsp
+}
+
+require("lspconfig").rust_analyzer.setup {
+	on_attach = on_attach -- setup the on attach keymaps for rust analyzer lsp
 }
