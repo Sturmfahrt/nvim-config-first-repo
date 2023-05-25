@@ -14,10 +14,10 @@ local packer_bootstrap = ensure_packer()
 -- Everything above each other
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim' -- Packer the package manager
-  use 'ellisonleao/gruvbox.nvim' -- Theme Plugin
-  use 'nvim-tree/nvim-tree.lua'
-  use 'nvim-tree/nvim-web-devicons'
-  use 'nvim-lualine/lualine.nvim'
+  use 'nvim-tree/nvim-tree.lua' -- File Tree
+  use 'nvim-tree/nvim-web-devicons' -- Icons for the File Tree
+  use 'nvim-lualine/lualine.nvim' -- Nice line things on the bottom
+  use 'navarasu/onedark.nvim' -- The theme that is not complete dog shit
   -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
