@@ -18,18 +18,18 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-web-devicons' -- Icons for the File Tree
   use 'nvim-lualine/lualine.nvim' -- Nice line things on the bottom
   use 'navarasu/onedark.nvim' -- The theme that is not complete dog shit
-  use 'nvim-treesitter/nvim-treesitter'
+  use 'nvim-treesitter/nvim-treesitter' -- Syntax parser plugin
   use {
 	  'nvim-telescope/telescope.nvim',
 	  tag = '0.1.1',
 	  requires = { {'nvim-lua/plenary.nvim'} }
-  }
-  -- My plugins here
-  -- use 'foo1/bar1.nvim'
-  -- use 'foo2/bar2.nvim'
+  } -- Fuzzy Finding plugin
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  } -- LSP plugins to get Mason the LSP package manager installed
 
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
   if packer_bootstrap then
     require('packer').sync()
   end
