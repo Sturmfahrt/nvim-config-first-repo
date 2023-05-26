@@ -29,6 +29,11 @@ return require('packer').startup(function(use)
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
   } -- LSP plugins to get Mason the LSP package manager installed
+  use {
+	  'hrsh7th/nvim-cmp',
+	  'hrsh7th/cmp-nvim-lsp',
+	  'L3MON4D3/LuaSnip'
+  } -- Plugins for code completion
 
   if packer_bootstrap then
     require('packer').sync()
