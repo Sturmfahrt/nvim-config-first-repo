@@ -29,7 +29,6 @@ return require('packer').startup(function(use)
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
   } -- LSP plugins to get Mason the LSP package manager installed
-  use {'neoclide/coc.nvim', branch = 'release'} -- Using CoC becuase trying to do everything natively has been an excercise in fustration.
 
   if packer_bootstrap then
     require('packer').sync()
